@@ -4,12 +4,11 @@ import styled from "styled-components";
 import Mixins from "../constants/Mixins";
 import Layout from "../constants/Layout";
 
+
 const Input = styled.TextInput`
   padding: 15px 20px;
-  border: ${Mixins.authBorder};
-  border-radius: ${Layout.btnRadius};
   width: 100%;
-  color: white;
+  color: #000;
   margin-bottom: 20px;
 `;
 
@@ -27,7 +26,7 @@ const AuthInput = ({
     value={value}
     keyboardType={keyboardType}
     secureTextEntry={password}
-    placeholderTextColor="white"
+    placeholderTextColor="#7b7b7b"
     underlineColorAndroid="transparent"
   />
 );

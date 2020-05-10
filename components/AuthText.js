@@ -10,11 +10,11 @@ const Container = styled.View`
 `;
 
 const Text = styled.Text`
-  color: white;
+  color: #7b7b7b;
 `;
 
 const LinkText = styled.Text`
-  color: white;
+  color: #7b7b7b;
   font-weight: 600;
 `;
 

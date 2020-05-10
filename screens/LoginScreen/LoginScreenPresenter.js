@@ -1,4 +1,5 @@
 import React from "react";
+import { TextInput } from 'react-native-paper';
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import { withNavigation } from "react-navigation";
@@ -16,12 +17,13 @@ const Container = styled.View`
   flex: 1
 `;
 
-const ImageBg = styled.Image`
-  position: absolute;
-  bottom: 0;
-  height: ${Layout.window.height};
-  width: ${Layout.window.width};
-`;
+// const ImageBg = styled.Image`
+//   position: absolute;
+//   bottom: 0;
+//   height: ${Layout.window.height};
+//   width: ${Layout.window.width};
+// `;
+
 
 const PlainBG = styled.View`
   background-color: #fff;
@@ -45,6 +47,7 @@ const AuthTextContainer = styled.View`
 
 const EmailAuth = styled.KeyboardAvoidingView`
   align-items: center;
+  
   width: 100%;
 `;
 
@@ -67,7 +70,7 @@ const LoginScreenPresenter = ({
       <Divider>or</Divider>
       <EmailAuth behavior="padding" enabled>
         <EmailAuthForm>
-          <AuthInput
+          {/* <AuthInput
             name="email"
             placeholder="Email"
             value={email}
@@ -80,7 +83,25 @@ const LoginScreenPresenter = ({
             value={password}
             password
             onChange={onInputChange}
+          /> */}
+
+          <TextInput
+            label='Email'
+            value={email}
+            underlineColor={"#7b7b7b"}
+            selectionColor={"#516feb"}
+            onChangeText={onInputChange}
           />
+
+          <TextInput
+            label='Password'
+            value={password}
+            underlineColor={"#7b7b7b"}
+            selectionColor={"#516feb"}
+            onChangeText={onInputChange}
+          />
+          
+          
           <BlueBigButton
             text="LOGIN"
             onPress={() => navigation.navigate("Main")}

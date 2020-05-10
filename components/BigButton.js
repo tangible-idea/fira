@@ -7,7 +7,6 @@ import Mixins from "../constants/Mixins";
 
 const Container = styled.View`
   background-color: ${props => (props.transparent ? "transparent" : "#FFFFFF")};
-  border-radius: ${Layout.btnRadius};
   flex-direction: row;
   align-items: center;
   justify-content: center;

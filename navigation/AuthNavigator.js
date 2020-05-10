@@ -29,7 +29,7 @@ export default createStackNavigator(
     Login: LoginScreen
   },
   {
-    initialRouteName: "Signup",
+    initialRouteName: "Login",
     headerMode: "none",
     ...Platform.select({
       ios: {

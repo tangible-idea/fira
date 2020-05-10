@@ -6,13 +6,14 @@ import { StatusBar } from "react-native";
 import Layout from "../../constants/Layout";
 import SocialLogin from "../../components/SocialLogin";
 import AuthText from "../../components/AuthText";
+import BlueBigButton from "../../components/BlueBigButton";
 import AuthInput from "../../components/AuthInput";
 import AuthButton from "../../components/AuthButton";
 
 const Container = styled.View`
   align-items: center;
   justify-content: flex-end;
-  flex: 1;
+  flex: 1
 `;
 
 const ImageBg = styled.Image`
@@ -20,6 +21,10 @@ const ImageBg = styled.Image`
   bottom: 0;
   height: ${Layout.window.height};
   width: ${Layout.window.width};
+`;
+
+const PlainBG = styled.View`
+  background-color: #fff;
 `;
 
 const ButtonsContainer = styled.View`
@@ -55,11 +60,8 @@ const LoginScreenPresenter = ({
   navigation
 }) => (
   <Container>
-    <ImageBg
-      source={require("../../assets/images/authBackground.jpg")}
-      resizeMode="cover"
-    />
-    <StatusBar barStyle="light-content" />
+    <PlainBG/>
+    <StatusBar barStyle="dark-content" />
     <ButtonsContainer>
       <SocialLogin />
       <Divider>or</Divider>
@@ -79,9 +81,8 @@ const LoginScreenPresenter = ({
             password
             onChange={onInputChange}
           />
-          <AuthButton
-            transparent={false}
-            text="Login"
+          <BlueBigButton
+            text="LOGIN"
             onPress={() => navigation.navigate("Main")}
           />
         </EmailAuthForm>

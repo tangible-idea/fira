@@ -7,7 +7,9 @@ const DarkText = styled.Text`
   color: white;
 `;
 
-const LightText = styled.Text``;
+const LightText = styled.Text`
+  color: #f3fbff;
+`;
 
 const AuthButton = ({ text, transparent, onPress }) => (
   <BigButton transparent={transparent} onPress={onPress}>
